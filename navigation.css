@@ -1,0 +1,148 @@
+.site-header {
+  --nav-green: #8bea22;
+  width: calc(100% - 124px);
+  max-width: none;
+  height: 68px;
+  margin-top: 26px;
+  padding: 0 28px;
+  border: 1px solid rgba(241, 238, 232, 0.2);
+  border-radius: 48px;
+  background: rgba(62, 76, 96, 0.68);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.home-page .site-header,
+.work-page .site-header,
+.about-page .site-header {
+  position: fixed;
+  top: 0;
+}
+
+.site-header .brand {
+  gap: 12px;
+}
+
+.site-header .brand-mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--nav-green);
+  color: #16231d;
+  font-size: 23px;
+  letter-spacing: -0.12em;
+}
+
+.site-header .brand-mark span {
+  color: #16231d;
+}
+
+.site-header .brand-name {
+  color: var(--paper);
+  line-height: 1.15;
+}
+
+.site-header .desktop-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 28px;
+  gap: 18px;
+  color: #d3d0ca;
+}
+
+.site-header .desktop-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-header .desktop-nav a:not(:last-child)::after {
+  content: "|";
+  color: rgba(211, 208, 202, 0.5);
+  margin-left: 0;
+}
+
+.site-header .header-cta {
+  display: inline-flex;
+}
+
+.site-header .desktop-nav a {
+  transition: color 0.2s ease;
+}
+
+.site-header .header-cta {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 23px;
+  border: 0;
+  border-radius: 28px;
+  background: var(--nav-green);
+  color: #16231d;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.site-header .header-cta:hover {
+  background: #a4f447;
+  transform: translateY(-2px);
+}
+
+.site-header .header-cta span {
+  color: #16231d;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    width: calc(100% - 24px);
+    height: 68px;
+    margin-top: 12px;
+    padding: 0 10px 0 12px;
+  }
+
+  @media (max-width: 1100px) {
+    .site-header .desktop-nav,
+    .site-header .header-cta {
+      display: none;
+    }
+
+    .site-header .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+      background: none;
+      color: var(--paper);
+    }
+  }
+
+  .site-header .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 20px;
+  }
+
+  .site-header .brand-name {
+    font-size: 9px;
+  }
+
+  .site-header .menu-toggle {
+    margin-left: auto;
+    border-radius: 22px;
+    padding: 12px;
+  }
+
+  .site-header .header-cta {
+    display: none;
+  }
+
+  .site-header .menu-toggle span {
+    width: 34px;
+    height: 3px;
+    border-radius: 3px;
+  }
+}

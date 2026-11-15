@@ -1,0 +1,51 @@
+.work-page {
+  overflow-x: hidden;
+}
+
+.work-page .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.work-page .work-hero {
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.work-page .work-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(19, 19, 19, 0.62);
+}
+
+.work-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: brightness(0.58) saturate(0.75);
+}
+
+.work-page .work-hero > *:not(.work-hero-video) {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .work-page .work-hero {
+    min-height: 100svh;
+  }
+}

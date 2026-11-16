@@ -11,21 +11,7 @@ A responsive static portfolio website for SV Digital Marketing. The site include
 No npm installation or build step is required.
 
 ## Run locally
-
-### Option 1: Python
-
-Open PowerShell in the project folder:
-
-```powershell
-cd C:\Users\pavit\Desktop\sangya
-python -m http.server 5500
-```
-
-Open [http://localhost:5500](http://localhost:5500) in a browser.
-
-To stop the server, press `Ctrl+C` in PowerShell.
-
-### Option 2: VS Code Live Server
+### Option 1: VS Code Live Server
 
 1. Open the project folder in VS Code.
 2. Install the **Live Server** extension if it is not installed.
